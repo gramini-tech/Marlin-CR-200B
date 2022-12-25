@@ -44,6 +44,11 @@
   #define SDCARD_EEPROM_EMULATION                 // SD EEPROM until all EEPROM is BL24CXX
 #endif
 
+#define CASE_LIGHT_PIN      PC14
+#define FAN1_PIN            PC0
+#define Y_STOP_PIN          PA4
+
+
 //
 // Servos
 //
@@ -75,3 +80,7 @@
 #define FAN_PIN                             PA2   // FAN
 
 #include "pins_CREALITY_V4.h"
+
+#ifdef FAN_SOFT_PWM_REQUIRED
+  #undef FAN_SOFT_PWM_REQUIRED
+#endif
